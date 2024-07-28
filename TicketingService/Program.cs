@@ -1,5 +1,5 @@
 using TicketingService.API;
-using TicketingService.DataSource.Ticketing;
+using TicketingService.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +15,7 @@ if (string.IsNullOrEmpty(connectionString))
     throw new ArgumentNullException(nameof(connectionString), "The connection string for the TicketingDb is not configured.");
 }
 
-builder.Services.ConfigureDataSourceServices(connectionString);
-builder.Services.AddMediatR(cf => cf.RegisterServicesFromAssembly(AppDomain.CurrentDomain.Load("TicketingService.Domain")));
+builder.Services.ConfigureDomainServices(connectionString);
 
 builder.Logging.ClearProviders();
 

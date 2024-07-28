@@ -4,6 +4,6 @@ namespace TicketingService.DataSource.Ticketing.Repository.Interfacecs
 {
     public interface ITicketRepository
     {
-        public Task<DataSourceResponse<IEnumerable<Ticket>>> GetAll(Paging paging);
+        public Task<DataSourceResponse<IEnumerable<Ticket>>> GetAll(PagingDataSource paging);
     }
 }

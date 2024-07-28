@@ -8,11 +8,6 @@ namespace TicketingService.API.Extensions
     {
         public static IActionResult ToAutoResponse<T>(this ResponseBase<T> result)
         {
-            //if (result.Messages != null)
-            //    result.Messages.ForEach(m =>
-            //    {
-            //        m.Value = LocalizationService.GetTranslate(m.Code);
-            //    });
             switch (result.Status)
             {
                 case ResponseStatus.Success:

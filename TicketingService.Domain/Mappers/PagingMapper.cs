@@ -5,9 +5,9 @@ namespace TicketingService.Domain.Mappers
 {
     public static class PagingMapper
     {
-        public static Paging ToDataSourcePaging(this IPaging paging)
+        public static PagingDataSource ToPagingDataSource(this PagingDomain paging)
         {
-            return new Paging()
+            return new PagingDataSource()
             { 
                 SortBy = paging.SortBy, 
                 SortOrder = paging.SortOrder == Microsoft.Data.SqlClient.SortOrder.Ascending ? "ASC" : "DESC", 

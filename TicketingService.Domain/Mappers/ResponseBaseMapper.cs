@@ -1,5 +1,4 @@
-﻿using Framework.DataSource;
-using TicketingService.DataSource.Ticketing.Common;
+﻿using TicketingService.DataSource.Ticketing.Common;
 using TicketingService.Domain.Common;
 
 namespace TicketingService.Domain.Mappers

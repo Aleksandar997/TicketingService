@@ -12,7 +12,7 @@ namespace TicketingService.DataSource.Ticketing.Repository
         {
             _idbConnector = idbConnector;
         }
-        public async Task<DataSourceResponse<IEnumerable<Ticket>>> GetAll(Paging paging)
+        public async Task<DataSourceResponse<IEnumerable<Ticket>>> GetAll(PagingDataSource paging)
         {
             var data = await _idbConnector
                 .QueryMultipleAsync()
